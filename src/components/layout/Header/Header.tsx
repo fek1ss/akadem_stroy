@@ -29,7 +29,7 @@ export default function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <div className={`${isOpen ? styles.hidden : styles.logo}`}>
-          <Image src='/images/logo.png' width={100} height={60} alt='Logo' />
+          <Image src='/images/logo-akadem.png' width={100} height={60} alt='Logo' />
           <p className={styles.logo__text}>Академ Строй</p>
         </div>
 
