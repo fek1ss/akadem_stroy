@@ -37,7 +37,7 @@ export default function Header() {
           <Hamburger
             toggled={isOpen}
             toggle={setOpen}
-            color={`${isOpen ? '#fff' : '#000'}`}
+            color={'#fff'}
           />
         </div>
 
