@@ -26,17 +26,17 @@ export default function Header() {
     if (!isHome) return;
 
     const onScroll = () => {
+      if(isOpen) return;
       setScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, [isHome]);
+  }, [isHome, isOpen]);
 
   return (
     <header
       className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}
-      style={{ color: `${scrolled ? '#000' : '#fff'}` }}
     >
       <div className={styles.inner}>
         <div className={`${styles.logo} ${isOpen ? styles.hidden : ''}`}>

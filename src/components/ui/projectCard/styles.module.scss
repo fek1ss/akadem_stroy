@@ -1,0 +1,114 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0; // фикс переполнения
+  transition: transform 0.3s ease;
+  position: relative; // для абсолютного описания
+  margin: 2rem 0;
+
+  &_wide {
+    .imageWrapper {
+      height: 260px;
+    }
+  }
+}
+
+.imageWrapper {
+  position: relative; // обязательно для Next/Image с fill
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 24px;
+  transition: height 0.3s ease; // плавное сжатие картинки
+}
+
+.image {
+  object-fit: cover; // картинка заполняет блок
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .imageWrapper {
+  height: 220px; // сжимаем картинку при hover
+}
+
+.card:hover .image {
+  transform: scale(1.05); // легкий зум
+}
+
+/* Описание поверх картинки */
+.desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95); // полупрозрачный фон
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(100%); 
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: #000;
+  border-radius: 0 0 24px 24px; // повторяем радиус картинки
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+}
+
+.card:hover .desc {
+  opacity: 1;
+  transform: translateY(0); // плавное появление
+}
+
+/* Информация под картинкой */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 5px;
+  margin-top: 2rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.year {
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* АДАПТИВ */
+@media (max-width: 1280px) {
+  .project__list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .card, .card_wide {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .imageWrapper {
+    height: 200px;
+  }
+
+  .card:hover .imageWrapper {
+    height: 140px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+}

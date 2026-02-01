@@ -1,0 +1,34 @@
+.transition {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: start;
+  font-weight: 500;
+  font-family: var(--font-montserrat-alt);
+  font-size: 20px;
+  width: fit-content;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.transitionBtn {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.transitionBtn:hover {
+  background-color: var(--main-color);
+  transition: 0.3s ease;
+  color: white;
+}
+
+.transitionText {
+  border: none;
+  background: none;
+}

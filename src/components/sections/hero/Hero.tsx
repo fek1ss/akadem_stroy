@@ -1,7 +1,8 @@
 'use client';
 
 import styles from './styles.module.scss';
-import { FiArrowRight } from 'react-icons/fi';
+import { TransitionBtn } from './../../ui/transitionBtn/TransitionBtn';
+import { SiTruenas } from 'react-icons/si';
 
 
 export default function Hero() {
@@ -21,10 +22,7 @@ export default function Hero() {
           <h1>Академ Строй</h1>
           <p>Наш капитал - репутация!</p>
         </div>
-        <button className={styles.hero__call}>
-          Cвязаться с нами
-          <FiArrowRight className={styles.hero__arrow} />
-        </button> 
+        <TransitionBtn text="Связаться с нами" btn={true} color='#000' />
       </div>
       <div className={styles.overlay}></div>
     </section>

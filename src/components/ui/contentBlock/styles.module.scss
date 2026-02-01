@@ -9,6 +9,10 @@
   &__img {
     border: none;
     border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: cover;
   }
 
   &__info {
@@ -23,11 +27,55 @@
     font-size: 40px;
     font-weight: 600;
     color: black;
+    line-height: 1.2;
   }
 
   &__description {
     color: var(--grey-text);
     font-size: 22px;
     font-weight: 500;
+  }
+
+  /* ================= Адаптив ================= */
+
+  // Планшеты
+  @media (max-width: 1024px) {
+    gap: 2rem;
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+
+    &__img {
+      max-width: 400px;
+    }
+  }
+
+  // Мобилки
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+
+    &__img {
+      max-width: 100%;
+      border-radius: 16px;
+    }
+
+    &__info {
+      gap: 1rem;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__description {
+      font-size: 18px;
+    }
   }
 }

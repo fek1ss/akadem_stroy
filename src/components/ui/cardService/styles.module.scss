@@ -9,7 +9,6 @@
   padding: 2rem;
   font-family: var(--font-montserrat-alt);
 
-
   &__title {
     font-size: 20px;
     font-weight: 500;
@@ -20,5 +19,35 @@
     color: var(--grey-text);
     font-size: 15px;
     font-weight: 500;
+  }
+
+  /* ================= Адаптив ================= */
+
+  // Планшеты
+  @media (max-width: 1024px) {
+    width: 45%; // чуть шире для двух колонок
+    padding: 1.5rem;
+
+    &__title {
+      font-size: 18px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+
+  // Мобилки
+  @media (max-width: 768px) {
+    width: 100%; // занимает всю ширину
+    padding: 1rem;
+
+    &__title {
+      font-size: 16px;
+    }
+
+    &__desc {
+      font-size: 13px;
+    }
   }
 }

@@ -9,7 +9,7 @@
   padding: 2rem 0;
   color: black;
   font-family: var(--font-montserrat-alt);
-  
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -22,13 +22,46 @@
     color: black;
   }
 
-
   &__cards {
     display: flex;
     justify-content: space-between;
     min-width: 326px;
     width: 100%;
     gap: 1rem;
-    width: 100%;
+  }
+
+  /* ================= Адаптив ================= */
+
+  // Планшеты
+  @media (max-width: 1024px) {
+    gap: 2rem;
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__cards {
+      gap: 0.8rem;
+      flex-wrap: wrap; // карточки будут переноситься на новую строку
+      justify-content: center;
+    }
+  }
+
+  // Мобилки
+  @media (max-width: 768px) {
+    gap: 1.5rem;
+    padding: 1rem 0;
+    margin: 3rem auto;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__cards {
+      flex-direction: column; // карточки вертикально
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
   }
 }

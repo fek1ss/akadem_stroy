@@ -4,6 +4,7 @@ import './globals.css';
 import { Socials } from './../components/ui/socials/Socials';
 import { AboutUs } from './../components/sections/aboutUs/AboutUs';
 import { Advantages } from './../components/sections/advantages/Advantages';
+import { Projects } from './../components/sections/projects/Projects';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Service />
       <AboutUs />
       <Advantages />
+      <Projects paginated={true} />
     </div>
   );
 }
