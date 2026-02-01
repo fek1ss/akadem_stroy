@@ -5,4 +5,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  font-family: var(--font-montserrat-alt);
+
+
+  &__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+  }
+
+  &__desc {
+    color: var(--grey-text);
+    font-size: 15px;
+    font-weight: 500;
+  }
 }

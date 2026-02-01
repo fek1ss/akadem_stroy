@@ -1,0 +1,33 @@
+.content {
+  width: 100%;
+  display: flex;
+  margin: 1rem 0;
+  gap: 3rem;
+  justify-content: center;
+  font-family: var(--font-montserrat-alt), sans-serif;
+
+  &__img {
+    border: none;
+    border-radius: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-family: var(--font-montserrat-alt);
+    width: 100%;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+  }
+
+  &__description {
+    color: var(--grey-text);
+    font-size: 22px;
+    font-weight: 500;
+  }
+}

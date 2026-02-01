@@ -3,18 +3,12 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiPhone } from 'react-icons/fi';
 import styles from './styles.module.scss';
 import { Sling as Hamburger } from 'hamburger-react';
 import { usePathname } from 'next/navigation';
-
-const links = [
-  { href: '/', label: 'Главная' },
-  { href: '/about', label: 'О Компании' },
-  { href: '/services', label: 'Услуги' },
-  { href: '/partners', label: 'Наши Партнеры' },
-  { href: '/contacts', label: 'Контакты' },
-];
+import { links } from '@/data/links';
+import { FiPhone, FiChevronDown } from 'react-icons/fi';
+import { HeaderSetting } from '@/components/ui/headerSetting/HeaderSetting';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
@@ -22,11 +16,17 @@ export default function Header() {
   const isHome = pathname === '/';
   const [scrolled, setScrolled] = useState(!isHome);
 
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleDropdown = (label: string) => {
+    setActiveDropdown(activeDropdown === label ? null : label);
+  };
+
   useEffect(() => {
     if (!isHome) return;
 
     const onScroll = () => {
-      setScrolled(window.scrollY > 10);
+      setScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', onScroll);
@@ -34,7 +34,10 @@ export default function Header() {
   }, [isHome]);
 
   return (
-    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+    <header
+      className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}
+      style={{ color: `${scrolled ? '#000' : '#fff'}` }}
+    >
       <div className={styles.inner}>
         <div className={`${styles.logo} ${isOpen ? styles.hidden : ''}`}>
           <Image
@@ -47,7 +50,11 @@ export default function Header() {
         </div>
 
         <div className={styles.hamburgerWrapper}>
-          <Hamburger toggled={isOpen} toggle={setOpen} color={'#fff'} />
+          <Hamburger
+            toggled={isOpen}
+            toggle={setOpen}
+            color={`${scrolled ? '#000' : '#fff'}`}
+          />
         </div>
 
         <nav
@@ -64,29 +71,55 @@ export default function Header() {
             />
           </div>
           {links.map(link => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={styles.navLink}
-              onClick={() => setOpen(false)}
-            >
-              {link.label}
-            </Link>
+            <div key={link.label} className={styles.navItemWrapper}>
+              {!link.subLinks ? (
+                <Link
+                  href={link.href}
+                  className={styles.navLink}
+                  onClick={() => setOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <div
+                  className={`${styles.dropdown} ${activeDropdown === link.label ? styles.dropdownActive : ''}`}
+                >
+                  <button
+                    className={styles.navLink}
+                    onClick={() => toggleDropdown(link.label)}
+                  >
+                    {link.label}
+                    <FiChevronDown
+                      className={`${styles.arrowIcon} ${activeDropdown === link.label ? styles.arrowRotate : ''}`}
+                    />
+                  </button>
+                  <div className={styles.dropdownMenu}>
+                    {link.subLinks.map(sub => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className={styles.subLink}
+                        onClick={() => {
+                          setOpen(false);
+                          setActiveDropdown(null);
+                        }}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
+
+          <div className={`${isOpen ? styles.mobileOnly : styles.hidden}`}>
+            <HeaderSetting />
+          </div>
         </nav>
 
-        <div className={`${isOpen ? styles.hidden : styles.setting}`}>
-          <div className={styles.lang}>
-            <span>RU</span>/<span>EN</span>
-          </div>
-
-          <div className={styles.phone}>
-            <FiPhone className={styles.phoneIcon} />
-            <div className={styles.number}>
-              <a href='tel:+77084343690'>+7 (708) 434 36 90</a>
-              <a href='tel:+77084343690'>+7 (777) 565 06 55</a>
-            </div>
-          </div>
+        <div className={`${isOpen ? styles.hidden : styles.desktopOnly}`}>
+          <HeaderSetting />
         </div>
       </div>
     </header>

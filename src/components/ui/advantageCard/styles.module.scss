@@ -1,0 +1,18 @@
+.card {
+  font-family: var(--font-montserrat-alt);
+  display: flex;
+  gap: 1rem;
+  width: 500px;
+
+  &__title {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &__desc {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--grey-text);
+  }
+}

@@ -31,7 +31,7 @@
 
 .inner {
   height: 100px;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -42,51 +42,93 @@
   display: none;
 }
 
+/* NAVIGATION (PC) */
 .nav {
   display: flex;
   align-items: center;
   gap: 32px;
-  color: #fff;
+}
+
+.navItemWrapper {
+  position: relative;
 }
 
 .navLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
   font-weight: 600;
   text-transform: uppercase;
   font-family: var(--font-montserrat), sans-serif;
   font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.setting {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.arrowIcon {
+  transition: transform 0.3s ease; /* Плавное вращение */
+  font-size: 1.2rem;
+  margin-left: 8px;
 }
 
-.lang {
-  display: flex;
-  gap: 5px;
+/* Когда дропдаун активен — поворачиваем стрелку на 180 градусов */
+.arrowRotate {
+  transform: rotate(180deg);
 }
 
-.phone {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-}
 
-.phoneIcon {
-  font-size: 22px;
-  flex-shrink: 0;
-}
-
-.number {
-  display: flex;
+/* DROPDOWN (PC) */
+.dropdownMenu {
+  display: none; /* Скрыто по умолчанию */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   flex-direction: column;
-  gap: 3px;
-  font-size: 14px;
-  line-height: 1.2;
+  padding: 10px 0;
+  z-index: 10;
+  margin-top: 10px;
 }
+
+.dropdownActive .dropdownMenu {
+  display: flex;
+}
+
+.subLink {
+  padding: 12px 20px;
+  color: #000 !important;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background 0.2s;
+  
+  &:hover {
+    background: #f5f5f5;
+  }
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+  margin-left: 5px;
+}
+
+.arrowRotate {
+  transform: rotate(180deg);
+}
+
+.desktopOnly {
+  display: flex;
+}
+
+.mobileOnly {
+  display: none;
+}
+
 
 @media (max-width: 1280px) {
   .hamburgerWrapper {
@@ -99,6 +141,15 @@
   .menu__open {
     display: flex;
     margin-top: 1rem;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: block;
+    margin-top: 2rem;
   }
 
   .phoneIcon {
@@ -116,13 +167,47 @@
     background-color: var(--main-color);
     opacity: 90%;
     height: 100vh;
-    width: 100%;
     transition: transform 0.3s ease-in-out;
+  }
+
+  .navLink,
+  .dropdown button {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Линия на всю ширину */
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  .dropdownMenu {
+    display: none; // По умолчанию скрыто везде
+    position: static;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1); /* Слегка подсвечиваем вложенное меню */
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .dropdownActive .dropdownMenu {
+    display: flex;
+  }
+
+  .subLink {
+    padding: 15px 3rem;
+    color: #fff !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: .3s ease;
+  }
+
+  .subLink:hover {
+    color: #000 !important;
   }
 
   .navLink {
     color: white;
-    border-bottom: #fff;
+    border-bottom: 1px solid rgb(231, 226, 226);
+    font-size: 20px;
+    text-transform: uppercase;
+    gap: 1rem;
   }
 
   .nav__open {
@@ -135,4 +220,5 @@
 }
 
 @media (max-width: 768px) {
+
 }

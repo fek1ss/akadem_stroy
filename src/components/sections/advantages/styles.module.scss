@@ -1,0 +1,19 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 90%;
+  margin: 1rem auto;
+
+  &__title {
+    color: black;
+    font-family: var(--font-montserrat);
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
