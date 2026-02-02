@@ -1,76 +1,55 @@
 'use client';
-import { useState, useRef, useEffect } from 'react';
+
+import { DotsPagination } from '@/components/ui/dotsPagination/DotsPagination';
+import { projects } from '@/data/projects';
 import styles from './styles.module.scss';
+import { ProjectCard } from '@/components/ui/projectCard/ProjectCard';
+import { useState } from 'react';
 import { Line } from './../../ui/line/Line';
 import { TransitionBtn } from './../../ui/transitionBtn/TransitionBtn';
-import { projects } from '@/data/projects';
-import { ProjectCard } from '@/components/ui/projectCard/ProjectCard';
-import { Pagination } from '@/components/ui/pagination/Pagination';
+import { Title } from './../../ui/title/Title';
 
-interface ProjectsProps {
-  paginated?: boolean; // если true, показываем по 3 проекта + пагинацию
-}
-
-export function Projects({ paginated = false }: ProjectsProps) {
+export function Projects() {
   const itemsPerPage = 3;
   const totalPages = Math.ceil(projects.length / itemsPerPage);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const listRef = useRef<HTMLDivElement>(null);
+  const [currentPage, setCurrentPage] = useState(0); // индекс страницы с 0
 
   const handlePageChange = (page: number) => {
-    if (page < 1 || page > totalPages) return;
     setCurrentPage(page);
   };
 
-  useEffect(() => {
-    if (paginated && listRef.current) {
-      const scrollWidth = listRef.current.clientWidth;
-      listRef.current.scrollTo({
-        left: scrollWidth * (currentPage - 1),
-        behavior: 'smooth',
-      });
-    }
-  }, [currentPage, paginated]);
-
-  // Определяем, какие проекты рендерить
-  const displayedProjects = paginated
-    ? projects.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
-    : projects;
+  const displayedProjects = projects.slice(
+    currentPage * itemsPerPage,
+    (currentPage + 1) * itemsPerPage,
+  );
 
   return (
     <div className={styles.projects}>
       <div className={styles.projects__header}>
-        <div className={styles.projects__name}>
-          <h1 className={styles.projects__title}>Реализованные проекты</h1>
-          <Line />
+        <div className={styles.projects__head}>
+          <Title text='реализованные проекты' />
         </div>
-        <TransitionBtn text='ВСЕ ПРОЕКТЫ' btn={false} color='#000' />
+        <TransitionBtn text='ВСЕ ПРОЕКТЫ' color='#595959' btn={false} />
       </div>
 
-      <div className={styles.projects__listWrapper} ref={listRef}>
-        <div className={styles.projects__list}>
-          {displayedProjects.map((prj, index) => (
-            <ProjectCard
-              key={prj.img}
-              title={prj.title}
-              description={prj.description}
-              year={prj.year}
-              image={prj.img}
-              isWide={index % 3 === 0}
-            />
-          ))}
-        </div>
+      <div className={styles.projects__list}>
+        {displayedProjects.map(prj => (
+          <ProjectCard
+            key={prj.img}
+            title={prj.title}
+            description={prj.description}
+            year={prj.year}
+            image={prj.img}
+          />
+        ))}
       </div>
 
-      {/* Подключаем пагинацию только если paginated */}
-      {paginated && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={handlePageChange}
-        />
-      )}
+      <DotsPagination
+        currentIndex={currentPage}
+        total={totalPages}
+        onChange={handlePageChange}
+      />
     </div>
   );
 }

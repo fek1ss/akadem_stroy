@@ -1,0 +1,60 @@
+/* ===== PAGINATION ===== */
+.pagination {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+
+  @media (max-width: 768px) {
+    gap: 1rem; 
+    margin: 0 auto;
+  }
+
+  @media (max-width: 480px) {
+    gap: 1rem; /* на телефонах минимальное расстояние */
+    margin: 0 auto;
+  }
+}
+
+.dot {
+  width: 5px;
+  height: 14px;
+  background: #cfcfcf;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: #888;
+    height: 16px;
+
+    @media (max-width: 480px) {
+      height: 15px; /* чуть меньше на маленьких экранах */
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 4px;
+    height: 12px;
+  }
+
+  @media (max-width: 480px) {
+    width: 3px;
+    height: 10px;
+  }
+}
+
+.active {
+  height: 20px;
+  background: #0057b8;
+
+  @media (max-width: 768px) {
+    height: 16px;
+  }
+
+  @media (max-width: 480px) {
+    height: 14px;
+  }
+}

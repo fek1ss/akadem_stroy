@@ -2,6 +2,7 @@
   --background: #ffffff;
   --main-color: #2f6ab6;
   --grey-text: #595959;
+  --footer-text: #AAAAAA;
   --font-sans: var(--font-montserrat);
   --font-accent: var(--font-montserrat-alt);
 }

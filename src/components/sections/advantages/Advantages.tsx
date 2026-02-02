@@ -1,14 +1,13 @@
 'use client';
 import styles from './styles.module.scss';
-import { Line } from './../../ui/line/Line';
 import { advantages } from '@/data/advantages';
 import { AdvantageCard } from '@/components/ui/advantageCard/AdvantageCard';
+import { Title } from './../../ui/title/Title';
 
 export function Advantages() {
   return (
     <div className={styles.advantages}>
-      <h1 className={styles.advantages__title}>Наши преимущества</h1>
-      <Line />
+      <Title text='НАШИ ПРЕИМУЩЕСТВА' />
       <div className={styles.advantages__list}>
         {advantages.map(adv => (
           <AdvantageCard

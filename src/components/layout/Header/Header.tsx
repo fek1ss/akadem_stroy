@@ -35,9 +35,7 @@ export default function Header() {
   }, [isHome, isOpen]);
 
   return (
-    <header
-      className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}
-    >
+    <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
         <div className={`${styles.logo} ${isOpen ? styles.hidden : ''}`}>
           <Image

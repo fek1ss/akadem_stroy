@@ -3,5 +3,4 @@ export interface ProjectCardProps {
   description: string;
   image: string;
   year: string | number;
-  isWide?: boolean;
 }

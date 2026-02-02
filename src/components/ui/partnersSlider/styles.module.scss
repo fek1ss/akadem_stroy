@@ -1,0 +1,47 @@
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.45s ease;
+  will-change: transform;
+}
+
+.item {
+  flex: 0 0 20%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  height: 80px;
+
+  img {
+    object-fit: contain;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .partners {
+    padding: 2.5rem 0;
+    gap: 2rem;
+  }
+
+  .item img {
+    max-width: 120px;
+    max-height: 50px;
+  }
+
+  .dot {
+    width: 4px;
+    height: 18px;
+  }
+
+  .active {
+    height: 26px;
+  }
+}

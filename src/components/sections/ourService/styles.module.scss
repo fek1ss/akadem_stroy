@@ -16,11 +16,6 @@
     gap: 1rem;
   }
 
-  &__title {
-    font-size: 40px;
-    font-weight: 600;
-    color: black;
-  }
 
   &__cards {
     display: flex;
@@ -52,10 +47,6 @@
     gap: 1.5rem;
     padding: 1rem 0;
     margin: 3rem auto;
-
-    &__title {
-      font-size: 28px;
-    }
 
     &__cards {
       flex-direction: column; // карточки вертикально

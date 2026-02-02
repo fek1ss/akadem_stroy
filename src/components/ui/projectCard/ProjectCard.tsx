@@ -9,11 +9,10 @@ export function ProjectCard({
   title,
   description,
   year,
-  image,
-  isWide = false,
+  image
 }: ProjectCardProps) {
   return (
-    <div className={`${styles.card} ${isWide ? styles.card_wide : ''}`}>
+    <div className={`${styles.card}`}>
       <div className={styles.imageWrapper}>
         <Image
           src={image}

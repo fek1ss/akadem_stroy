@@ -1,15 +1,14 @@
 'use client';
 
 import styles from './styles.module.scss';
-import { Line } from './../../ui/line/Line';
 import { CardService } from '@/components/ui/cardService/СardService';
 import { services } from '@/data';
+import { Title } from './../../ui/title/Title';
 
 export function Service() {
   return (
     <div className={styles.services}>
-      <h1 className={styles.services__title}>Наши Услуги</h1>
-      <Line />
+      <Title text="Наши услуги" />
       <div className={styles.services__cards}>
         {services.map(card => (
           <CardService

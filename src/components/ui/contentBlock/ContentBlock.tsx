@@ -4,6 +4,7 @@ import { Line } from '../line/Line';
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import { ContentBlockProps } from '@/types';
+import { Title } from './../title/Title';
 
 
 export function ContentBlock({
@@ -22,8 +23,7 @@ export function ContentBlock({
         className={styles.content__img}
       />
       <div className={styles.content__info}>
-        <h1 className={styles.content__title}>{title}</h1>
-        <Line />
+        <Title text={title} />
         <p className={styles.content__description}>{description}</p>
         {additionalText && (
           <p className={styles.content__description}>{additionalText}</p>
