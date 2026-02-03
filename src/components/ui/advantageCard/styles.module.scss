@@ -10,8 +10,14 @@
     gap: 1rem;
   }
 
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+
   &__desc {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: var(--grey-text);
   }

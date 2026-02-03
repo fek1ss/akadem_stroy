@@ -1,0 +1,2 @@
+export const AKADEM_STROY = '77084343690'
+export const AKADEM_STROY1 = '77775650655'

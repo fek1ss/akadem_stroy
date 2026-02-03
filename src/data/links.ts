@@ -12,9 +12,10 @@ export const links = [
     href: '/services', 
     label: 'Услуги',
     subLinks: [
-      { href: '/services/build', label: 'Строительство' },
-      { href: '/services/design', label: 'Проектирование' },
-      { href: '/services/repair', label: 'Ремонт' },
+      { href: '/services/ventilation', label: 'Вентиляция' },
+      { href: '/services/conditioning', label: 'Кондиционирование' },
+      { href: '/services/low-current', label: 'Слаботочные системы' },
+      { href: '/services/drainage', label: 'Водосточная система' },
     ]
   },
   { href: '/partners', label: 'Наши Партнеры' },

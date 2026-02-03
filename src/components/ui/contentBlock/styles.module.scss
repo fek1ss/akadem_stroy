@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   margin: 1rem 0;
-  gap: 3rem;
+  gap: 5rem;
   justify-content: center;
   font-family: var(--font-montserrat-alt), sans-serif;
 
@@ -18,9 +18,10 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     font-family: var(--font-montserrat-alt);
     width: 100%;
+    padding-top: 2rem;
   }
 
   &__title {
@@ -28,6 +29,11 @@
     font-weight: 600;
     color: black;
     line-height: 1.2;
+  }
+
+  &__text {
+    width: 100%;
+    font-family: var(--font-montserrat-alt);
   }
 
   &__description {

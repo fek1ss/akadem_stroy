@@ -7,14 +7,13 @@ import styles from './styles.module.scss';
 import { Sling as Hamburger } from 'hamburger-react';
 import { usePathname } from 'next/navigation';
 import { links } from '@/data/links';
-import { FiPhone, FiChevronDown } from 'react-icons/fi';
+import { FiChevronDown } from 'react-icons/fi';
 import { HeaderSetting } from '@/components/ui/headerSetting/HeaderSetting';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === '/';
-  const [scrolled, setScrolled] = useState(!isHome);
+  const [scrolled, setScrolled] = useState(!pathname);
 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
@@ -23,7 +22,6 @@ export default function Header() {
   };
 
   useEffect(() => {
-    if (!isHome) return;
 
     const onScroll = () => {
       if(isOpen) return;
@@ -32,7 +30,7 @@ export default function Header() {
 
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
-  }, [isHome, isOpen]);
+  }, [isOpen]);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>

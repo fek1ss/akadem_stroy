@@ -1,11 +1,9 @@
 'use client';
 
-import { Line } from '../line/Line';
 import styles from './styles.module.scss';
 import Image from 'next/image';
 import { ContentBlockProps } from '@/types';
 import { Title } from './../title/Title';
-
 
 export function ContentBlock({
   title,
@@ -23,11 +21,13 @@ export function ContentBlock({
         className={styles.content__img}
       />
       <div className={styles.content__info}>
-        <Title text={title} />
-        <p className={styles.content__description}>{description}</p>
-        {additionalText && (
-          <p className={styles.content__description}>{additionalText}</p>
-        )}
+        <Title text={title} color='#000' />
+        <div className={styles.content__text}>
+          <p className={styles.content__description}>{description}</p>
+          {additionalText && (
+            <p className={styles.content__description}>{additionalText}</p>
+          )}
+        </div>
       </div>
     </div>
   );

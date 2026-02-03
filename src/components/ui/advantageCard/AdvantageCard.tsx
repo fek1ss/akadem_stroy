@@ -6,7 +6,7 @@ import Image from 'next/image';
 export function AdvantageCard({ title, description, img }: cardProps) {
   return (
     <div className={styles.card}>
-      <Image src={img} width={80} height={80} alt={title} />
+      <Image src={img} width={100} height={100} alt={title} />
       <div className={styles.card__info}>
         <p className={styles.card__title}>{title}</p>
         <p className={styles.card__desc}>{description}</p>

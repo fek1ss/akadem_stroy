@@ -7,7 +7,7 @@ import { Title } from './../../ui/title/Title';
 export function Advantages() {
   return (
     <div className={styles.advantages}>
-      <Title text='НАШИ ПРЕИМУЩЕСТВА' />
+      <Title text='НАШИ ПРЕИМУЩЕСТВА' color='#000' />
       <div className={styles.advantages__list}>
         {advantages.map(adv => (
           <AdvantageCard

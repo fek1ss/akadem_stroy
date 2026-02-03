@@ -8,7 +8,7 @@ import { Title } from './../../ui/title/Title';
 export function Service() {
   return (
     <div className={styles.services}>
-      <Title text="Наши услуги" />
+      <Title text="Наши услуги" color='#000' />
       <div className={styles.services__cards}>
         {services.map(card => (
           <CardService

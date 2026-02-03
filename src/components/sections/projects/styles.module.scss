@@ -26,7 +26,8 @@
     display: grid;
     gap: 3rem;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     transition: all 0.3s ease;
   }
 }

@@ -1,0 +1,62 @@
+.form {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* две колонки */
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inp,
+.select {
+  height: 46px;
+  border-radius: 24px;
+  border: none;
+  padding: 0 20px;
+  font-size: 14px;
+  outline: none;
+  color: black;
+  background: #fff;
+}
+
+/* upload */
+.upload {
+  height: 46px;
+  border-radius: 24px;
+  background: #fff;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #8a8a8a;
+  cursor: pointer;
+}
+
+/* кнопка как на фото */
+.btn {
+  margin-top: 6px;
+  width: fit-content;
+  padding: 0 32px;
+  height: 46px;
+  border-radius: 24px;
+  border: none;
+  background: var(--main-color);
+  color: #fff;
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background: #084298;
+  }
+}

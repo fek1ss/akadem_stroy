@@ -1,6 +1,7 @@
 .slider {
   width: 100%;
   overflow: hidden;
+  margin: 2rem 0;
 }
 
 .track {
@@ -13,7 +14,8 @@
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
 
-    /* скрываем скроллбар */
+    gap: 0;
+
     -ms-overflow-style: none;
     scrollbar-width: none;
     &::-webkit-scrollbar {

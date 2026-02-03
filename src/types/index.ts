@@ -3,3 +3,4 @@ export * from './card';
 export * from './project';
 export * from './transitionBtn';
 export * from './pagination';
+export * from './hero';

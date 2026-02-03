@@ -7,20 +7,17 @@ import { Advantages } from './../components/sections/advantages/Advantages';
 import { Projects } from './../components/sections/projects/Projects';
 import { CertificatesSection } from './../components/sections/certificates/CertificatesSection';
 import { PartnersSection } from './../components/sections/partnersSection/PartnersSection';
-import { Footer } from './../components/layout/Footer/Footer';
 
 export default function Home() {
   return (
     <div className='page'>
       <Hero />
-      <Socials />
       <Service />
       <AboutUs />
       <Advantages />
       <Projects />
       <CertificatesSection />
       <PartnersSection />
-      <Footer />
     </div>
   );
 }
