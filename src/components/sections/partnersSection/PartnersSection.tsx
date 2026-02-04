@@ -21,18 +21,18 @@ export function PartnersSection() {
 
   return (
     <section className={styles.partners}>
-      <PartnersSlider
-        logos={partners}
-        activeIndex={active}
-        itemsPerPage={itemsPerPage}
-        onChange={setActive}
-      />
+        <PartnersSlider
+          logos={partners}
+          activeIndex={active}
+          itemsPerPage={itemsPerPage}
+          onChange={setActive}
+        />
 
-      <DotsPagination
-        currentIndex={active}
-        total={totalPages}
-        onChange={setActive}
-      />
+        <DotsPagination
+          currentIndex={active}
+          total={totalPages}
+          onChange={setActive}
+        />
     </section>
   );
 }

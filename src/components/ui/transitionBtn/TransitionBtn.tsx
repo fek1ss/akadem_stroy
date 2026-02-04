@@ -8,9 +8,11 @@ export function TransitionBtn({
   text,
   btn = false,
   color,
+  onClick,
 }: TransitionBtnProps) {
   return (
     <button
+      onClick={onClick}
       className={`${styles.transition} ${btn ? styles.transitionBtn : styles.transitionText}`}
       style={{ color: color }}
     >

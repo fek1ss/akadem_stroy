@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { projects } from '@/data/projects';
 import { ProjectCard } from '@/components/ui/projectCard/ProjectCard';
 import { Title } from '@/components/ui/title/Title';
 import { TransitionBtn } from '@/components/ui/transitionBtn/TransitionBtn';
 import { DotsPagination } from '@/components/ui/dotsPagination/DotsPagination';
 import styles from './styles.module.scss';
+import { projects } from '@/data';
 
 export function Projects() {
   const listRef = useRef<HTMLDivElement | null>(null);

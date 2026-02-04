@@ -3,102 +3,175 @@ export const projects = [
     title: 'Автосалон «Mercedes» г.Алматы',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
     img: '/images/projects/mercedes.png',
-    year: 2025
+    year: 2025,
+    category: 'Бизнес центры',
   },
   {
-    title: 'Автосалон «Lexus» г.Уральск',
-    description: 'Поставка и монтаж систем вентиляции и кондиционирования.',
-    img: '/images/projects/lexus.png',
-    year: 2024
-  },
-  {
-    title: 'Автосалон «Tayota» г.Уральск',
-    description: 'Поставка и монтаж систем вентиляции и кондиционирования.',
-    img: '/images/projects/tayota.png',
-    year: 2024
-  },
-  {
-    title: 'Рестораны «Shafran» г.Алматы',
+    title: 'Сеть ресторанов «Shafran» г.Алматы',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
     img: '/images/projects/shafran.png',
-    year: 2023
+    year: 2020,
+    category: 'Торговые сети',
   },
   {
-    title: 'СК «INVICTUS GO»',
-    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
-    img: '/images/projects/invictus.png',
-    year: 2023
-  },
-  {
-    title: 'Салон красоты «Pafos»',
-    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
-    img: '/images/projects/pafos.png',
-    year: 2023
-  },
-  {
-    title: '«Комфортная школа на 1200 мест» в п.Подстепное',
-    description: 'Поставка, монтаж систем вентиляции, кондиционирования и слаботочных систем.',
-    img: '/images/projects/school.png',
-    year: 2024
-  },
-  {
-    title: 'Сеть ресторанов «Мәдениет үйі»',
+    title: 'Сеть ресторанов «Мәдениет үйі» г.Алматы',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
     img: '/images/projects/restourans.png',
-    year: 2023
+    year: 2019,
+    category: 'Торговые сети',
   },
   {
-    title: '«Дом Культуры» в г.Аксай',
-    description: 'Поставка и монтаж систем вентиляции.',
-    img: '/images/projects/dk_aksay.png',
-    year: 2025
+    title: 'Автосалон «Lexus / Toyota» г.Уральск',
+    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
+    img: '/images/projects/lexus.png',
+    year: 2024,
+    category: 'Бизнес центры',
   },
   {
-    title: 'Центр реабилитации инвалидов',
-    description: 'Монтаж систем вентиляции и слаботочных систем.',
-    img: '/images/projects/center.png',
-    year: 2024
-  },
-  {
-    title: '«Комфортная школа на 1500 мест» в п.Деркул',
-    description: 'Поставка и монтаж систем вентиляции и кондиционирования.',
-    img: '/images/projects/school_derkul.png',
-    year: 2024
-  },
-  {
-    title: 'АЗС «Helios»',
+    title: 'АЗС «Helios» ЗКО',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования воздуха.',
     img: '/images/projects/helios.png',
-    year: 2022
+    year: 2022,
+    category: 'Торговые сети',
   },
   {
-    title: 'РК «Eldivino»',
-    description: 'Монтаж систем вентиляции и кондиционеров.',
-    img: '/images/projects/eldivino.png',
-    year: 2021
-  },
-  {
-    title: 'ТОО «Hyundai Trans Auto»',
-    description: 'Поставка и монтаж систем вентиляции производственного цеха.',
-    img: '/images/projects/hyunday.png',
-    year: 2024
-  },
-  {
-    title: 'ЖК «Saxon Yard»',
-    description: 'Поставка и монтаж систем вентиляции.',
-    img: '/images/projects/saxon.png',
-    year: 2023
-  },
-  {
-    title: 'АЗС «SINOOIL»',
+    title: 'АЗС «SINOOIL» г.Уральск',
     description: 'Монтаж систем вентиляции и сплит-систем.',
     img: '/images/projects/sinooil.png',
-    year: 2022
+    year: 2022,
+    category: 'Торговые сети',
   },
   {
-    title: 'ЖК «Lancashire»',
-    description: 'Поставка и монтаж систем вентиляции.',
-    img: '/images/projects/lancashire.png',
-    year: 2022
+    title: 'РК «Eldivino» г.Уральск',
+    description: 'Монтаж систем вентиляции и кондиционеров.',
+    img: '/images/projects/eldivino.png',
+    year: 2020,
+    category: 'Бизнес центры',
   },
-]
+  {
+    title: 'СК «INVICTUS GO» г.Уральск',
+    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
+    img: '/images/projects/invictus.png',
+    year: 2023,
+    category: 'Бизнес центры',
+  },
+  {
+    title: 'Салон красоты «Pafos» г.Астана',
+    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
+    img: '/images/projects/pafos.png',
+    year: 2023,
+    category: 'Бизнес центры',
+  },
+  {
+    title: 'ЖК «Lancashire» г.Алматы',
+    description: 'Поставка, монтаж систем вентиляции (для компании «К7 Group»).',
+    img: '/images/projects/lancashire.png',
+    year: 2022,
+    category: 'Жилые комплексы',
+  },
+  {
+    title: 'ЖК «Saxon Yard» г.Алматы',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/saxon.png',
+    year: 2023,
+    category: 'Жилые комплексы',
+  },
+  {
+    title: '7-этажное административное здание г.Уральск',
+    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
+    img: '/images/projects/admin.png',
+    year: 2025,
+    category: 'Бизнес центры',
+  },
+  {
+    title: 'ТОО «Hyundai Trans Auto» г.Алматы',
+    description: 'Поставка, монтаж систем вентиляции для цеха производства школьных автобусов.',
+    img: '/images/projects/hyunday.png',
+    year: 2024,
+    category: 'Промышленные базы',
+  },
+  {
+    title: 'Канализационно-насосная станция г.Уральск',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/kana.png',
+    year: 2024,
+    category: 'Промышленные базы',
+  },
+  {
+    title: 'Убойный цех для СПК «Миялы» Атырауская обл.',
+    description: 'Строительство (убойный цех).',
+    img: '/images/projects/abattoir_miyaly.png',
+    year: 2021,
+    category: 'Промышленные базы',
+  },
+  {
+    title: 'ТОО «QHSE-Akbarys» — вахтовый поселок Тенгиз',
+    description: 'Монтаж сайдинга и сэндвич-панелей.',
+    img: '/images/projects/tengiz_panels.png',
+    year: 2021,
+    category: 'Промышленные базы',
+  },
+  {
+    title: '«Комфортная школа на 1200 мест» п.Деркул, ЗКО',
+    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
+    img: '/images/projects/school__derkul.png',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+  {
+    title: '«Дом Культуры» г.Аксай, ЗКО',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/dk_aksay.png',
+    year: 2025,
+    category: 'Госучреждения',
+  },
+  {
+    title: '«ДК Молодежи» г.Уральск, ЗКО',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/dk_youth_uralsk.webp',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+  {
+    title: 'Центр реабилитации инвалидов г.Уральск, ЗКО',
+    description: 'Монтаж систем вентиляции и слаботочных систем.',
+    img: '/images/projects/center.png',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+  {
+    title: 'СОШ №31 г.Уральск, ЗКО',
+    description: 'Поставка, монтаж систем вентиляции, слаботочных систем.',
+    img: '/images/projects/school_31.webp',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+  {
+    title: 'Школа с.Жалын, ЗКО',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/school_zhalyn.png',
+    year: 2023,
+    category: 'Госучреждения',
+  },
+  {
+    title: 'Школа-интернат с.Чапаево, ЗКО',
+    description: 'Поставка, монтаж вентиляции (приточно-вытяжные системы «DOSPEL»).',
+    img: '/images/projects/boarding_school_chapaevo.png',
+    year: 2017,
+    category: 'Госучреждения',
+  },
+  {
+    title: 'Поликлиника №7 г.Уральск',
+    description: 'Поставка, монтаж вентиляции и сплит-систем.',
+    img: '/images/projects/poliklinika7.png',
+    year: 2018,
+    category: 'Госучреждения',
+  },
+  {
+    title: 'ТОО «Clever Medical» г.Алматы',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/clever.png',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+];

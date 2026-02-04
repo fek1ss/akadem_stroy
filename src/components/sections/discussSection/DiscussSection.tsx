@@ -4,7 +4,7 @@ import { Title } from './../../ui/title/Title';
 
 export function DiscussSection() {
   return (
-    <section className={styles.wrapper}>
+    <section className={styles.wrapper} id="discuss">
       <div className={styles.overlay} />
 
       <div className={styles.container}>

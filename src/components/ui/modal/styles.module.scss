@@ -1,17 +1,113 @@
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 16px; // Внешний отступ, чтобы на мобилке не прилипало вплотную к краям браузера
 }
 
 .modal {
-  background: #fff;
-  padding: 32px;
-  border-radius: 16px;
-  width: 100%;
-  max-width: 420px;
+  background: linear-gradient(rgba(108, 108, 108, 0.6), rgba(0, 0, 0, 0.6)), 
+              url('/images/contentBlock/form.png') center/cover no-repeat;
+  border-radius: 20px;
+  position: relative;
+  max-height: 95vh;
+  overflow-y: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  // --- Адаптивная ширина ---
+  width: 70%; // По умолчанию (на ПК)
+  
+  @media (max-width: 1024px) {
+    width: 85%; // На планшетах чуть шире
+  }
+
+  @media (max-width: 768px) {
+    width: 100%; // На мобилках на всю ширину
+    border-radius: 12px; // Уменьшаем радиус для мобилок
+  }
+  // -------------------------
+
+  &::-webkit-scrollbar { display: none; }
+  scrollbar-width: none;
+}
+
+.modalInner {
+  padding: 60px 80px; // Больше паддингов для широкой модалки на ПК
+  color: #fff;
+  text-align: left;
+
+  @media (max-width: 768px) {
+    padding: 40px 20px; // Компактные отступы на мобилке
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 0.7;
+
+  &:hover { opacity: 0.7; }
+
+  @media (max-width: 768px) {
+    top: 10px;
+    right: 15px;
+    font-size: 32px;
+  }
+}
+
+.modalHeader {
+  margin-bottom: 35px;
+
+  .modalTitle {
+    font-size: 32px; // Крупнее для широкой модалки
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+
+  .divider {
+    width: 60px;
+    height: 4px;
+    background: #fff;
+    margin-bottom: 25px;
+  }
+
+  .modalSubtitle {
+    font-size: 16px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    opacity: 0.9;
+    max-width: 600px; // Чтобы текст не растягивался на всю ширину 70%
+    
+    @media (max-width: 768px) {
+      font-size: 13px;
+    }
+  }
+}
+
+.modalFooterText {
+  margin-top: 30px;
+  font-size: 12px;
+  line-height: 1.5;
+  opacity: 0.6;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
 }

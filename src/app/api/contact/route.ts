@@ -4,7 +4,6 @@ import nodemailer from 'nodemailer';
 export async function POST(req: Request) {
   try {
     const formData = await req.formData();
-
     const company = formData.get('company');
     const phone = formData.get('phone');
     const service = formData.get('service');
@@ -15,13 +14,12 @@ export async function POST(req: Request) {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.SMTP_USER,
+        user: process.env.SMTP_USER, // flexypufic@gmail.com
         pass: process.env.SMTP_PASS,
       },
     });
 
     const attachments = [];
-
     if (file) {
       const buffer = Buffer.from(await file.arrayBuffer());
       attachments.push({
@@ -31,13 +29,14 @@ export async function POST(req: Request) {
     }
 
     await transporter.sendMail({
-      from: '"AkademStroy" <info@akademstroy.kz>',
-      to: 'info@akademstroy.kz',
+      from: `"${company}" <${process.env.SMTP_USER}>`, // отображаемое имя компании
+      to: 'flexypufic@gmail.com',                       // куда придет письмо
+      replyTo: phone ? `${phone}@example.com` : undefined, // можно указать email пользователя, если есть
       subject: 'Заявка с сайта',
       text: `
-Организация: ${company}
-Телефон: ${phone}
-Услуга: ${service}
+      Организация: ${company}
+      Телефон: ${phone}
+      Услуга: ${service}
       `,
       attachments,
     });

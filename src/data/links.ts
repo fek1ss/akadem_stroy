@@ -4,8 +4,8 @@ export const links = [
     href: '/', 
     label: 'О Компании',
     subLinks: [
-      { href: '/about/history', label: 'История' },
-      { href: '/about/team', label: 'Команда' },
+      { href: '/about/projects', label: 'Наши проекты' },
+      { href: '/about/clients', label: 'Наши клиенты' },
     ]
   },
   { 
@@ -18,6 +18,5 @@ export const links = [
       { href: '/services/drainage', label: 'Водосточная система' },
     ]
   },
-  { href: '/partners', label: 'Наши Партнеры' },
   { href: '/contacts', label: 'Контакты' },
 ];
