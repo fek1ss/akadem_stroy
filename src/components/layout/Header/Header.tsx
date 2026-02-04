@@ -41,6 +41,7 @@ export default function Header() {
             width={100}
             height={60}
             alt='Logo'
+            className={styles.logo__img}
           />
           <p className={styles.logo__text}>Академ Строй</p>
         </div>
@@ -64,6 +65,7 @@ export default function Header() {
               width={100}
               height={60}
               alt='Logo'
+              className={styles.logo}
             />
           </div>
           {links.map(link => (

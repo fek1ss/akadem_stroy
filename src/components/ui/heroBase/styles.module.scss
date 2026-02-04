@@ -39,6 +39,12 @@
     }
   }
 
+  &__desc {
+    max-width: 843px;
+    font-family: var(--font-montserrat);
+    font-size: 24px;
+  }
+
   &__call {
     display: flex;
     align-items: center;
@@ -87,4 +93,53 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
+}
+
+
+/* Основные стили (Desktop) у вас уже есть, добавляем медиа-запрос вниз */
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh; /* Уменьшаем высоту, 120vh на мобилках часто избыточно */
+    
+    &__text {
+      font-size: 20px;
+      text-align: center; /* Опционально: центровка текста на мобильных смотрится лучше */
+      align-items: center; 
+    }
+
+    &__title {
+      gap: 0.5rem;
+
+      h1 {
+        font-size: 32px; /* Значительно уменьшаем заголовок, чтобы он не переносился по одному слову */
+        line-height: 1.2;
+      }
+    }
+
+    &__desc {
+      font-size: 18px;
+    }
+
+    &__call {
+      font-size: 16px;   /* Уменьшаем кнопку */
+      padding: 12px 20px;
+      width: 100%;       /* На мобильных устройствах кнопки во всю ширину удобнее для нажатия */
+      max-width: 280px;  /* Но ограничиваем, чтобы она не была гигантской */
+      justify-content: center;
+    }
+  }
+}
+
+/* Для совсем маленьких экранов (iPhone SE и т.д.) */
+@media (max-width: 480px) {
+  .hero {
+    &__title h1 {
+      font-size: 28px;
+    }
+    
+    &__text {
+      gap: 1rem;
+    }
+  }
 }

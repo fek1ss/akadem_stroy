@@ -35,9 +35,9 @@ export default function HeroBase({
       <div className={styles.hero__text}>
         <div className={styles.hero__title}>
           <h1>{title}</h1>
-          <p>{description}</p>
+          <p className={styles.hero__desc}>{description}</p>
         </div>
-        <TransitionBtn text='Связаться с нами' btn={true} color='#000' />
+        <TransitionBtn text='Связаться с нами' btn={false} color='#fff' />
       </div>
       <div className={styles.overlay}></div>
     </div>
