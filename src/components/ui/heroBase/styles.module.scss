@@ -100,12 +100,12 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 100vh; /* Уменьшаем высоту, 120vh на мобилках часто избыточно */
-    
+
     &__text {
       font-size: 20px;
       text-align: center; /* Опционально: центровка текста на мобильных смотрится лучше */
-      align-items: center; 
+      align-items: center;
+      margin-bottom: 30%;
     }
 
     &__title {
