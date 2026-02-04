@@ -3,41 +3,48 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import styles from './styles.module.scss';
+import { PartnersProps } from '@/types';
 
-interface Props {
-  logos: string[];
-  activeIndex: number;
-  itemsPerPage: number;
-  onChange: (index: number) => void;
-}
 
-export function PartnersSlider({ logos, activeIndex, itemsPerPage, onChange }: Props) {
+export function PartnersSlider({
+  logos,
+  activeIndex,
+  itemsPerPage,
+  onChange,
+}: PartnersProps) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const isProgrammaticScroll = useRef(false);
+  const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+  const isProgrammatic = useRef(false);
 
-  // pagination → scroll
+  /* ---------- pagination → move ---------- */
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
 
     const itemWidth = track.children[0]?.clientWidth || 0;
     const gap = parseInt(getComputedStyle(track).gap || '0', 10);
+    const pageWidth = (itemWidth + gap) * itemsPerPage;
 
-    isProgrammaticScroll.current = true;
+    isProgrammatic.current = true;
 
-    track.scrollTo({
-      left: activeIndex * (itemWidth + gap) * itemsPerPage,
-      behavior: 'smooth',
-    });
+    if (isMobile) {
+      track.scrollTo({
+        left: activeIndex * pageWidth,
+        behavior: 'smooth',
+      });
+    } else {
+      track.style.transform = `translateX(-${activeIndex * pageWidth}px)`;
+    }
 
     setTimeout(() => {
-      isProgrammaticScroll.current = false;
+      isProgrammatic.current = false;
     }, 400);
-  }, [activeIndex, itemsPerPage]);
+  }, [activeIndex, itemsPerPage, isMobile]);
 
-  // swipe → pagination
+  /* ---------- swipe → pagination (mobile only) ---------- */
   const handleScroll = () => {
-    if (isProgrammaticScroll.current) return;
+    if (!isMobile || isProgrammatic.current) return;
+
     const track = trackRef.current;
     if (!track) return;
 
