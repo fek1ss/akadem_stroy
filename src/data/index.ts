@@ -5,3 +5,4 @@ export * from './partners';
 export * from './servicesData';
 export * from './projects';
 export * from './clients';
+export * from './contacts';

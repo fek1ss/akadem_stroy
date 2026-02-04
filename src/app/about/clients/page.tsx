@@ -6,7 +6,6 @@ import { clients } from '@/data/clients';
 import { Filter } from '@/components/ui/filter/Filter';
 import { ClientCard } from '@/components/ui/clientCard/clientCard';
 import { Modal } from '@/components/ui/modal/Modal';
-import { DiscussForm } from '@/components/ui/discussForm/DiscussForm';
 
 export default function Page() {
   const categories = ['Алматы', 'Астана', 'Уральск', 'Атырау'];

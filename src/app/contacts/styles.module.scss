@@ -1,0 +1,40 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; // Увеличил отступ между городами для лучшей читаемости
+  padding: 80px 0;
+  width: 90%;
+  max-width: 1200px; // Ограничиваем на ПК, чтобы не расползалось
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    gap: 40px;
+    padding: 40px 0;
+    width: 95%; // На мобилках используем больше места
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center; // Центрируем карту и карточку по вертикали
+
+  @media (max-width: 1024px) {
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    // Магия порядка: на мобилках карта всегда будет ПОД текстом
+    // Для этого MapBlock внутри ряда должен иметь класс (ниже в TSX добавим)
+    div[class*="MapBlock"] {
+      order: 2;
+    }
+    div[class*="ContactCard"] {
+      order: 1;
+    }
+  }
+}
