@@ -18,6 +18,7 @@ export default function Page() {
       />
 
       <section className={styles.contacts}>
+
         {contacts.map((item, index) => {
           // Определяем четность для шахматного порядка на десктопе
           const isEven = index % 2 === 0;
@@ -25,10 +26,10 @@ export default function Page() {
           return (
             <div key={item.id} className={styles.row}>
               {isEven ? (
-                <>
-                  <MapBlock src={item.mapSrc} />
-                  <ContactCard {...item} />
-                </>
+                  <>
+                    <MapBlock src={item.mapSrc} />
+                    <ContactCard {...item} />
+                  </>
               ) : (
                 <>
                   <ContactCard {...item} />

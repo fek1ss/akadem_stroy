@@ -1,6 +1,8 @@
 // Footer.tsx
 'use client';
+import { scrollToDiscuss } from '@/utils/scrollToDiscuss';
 import styles from './styles.module.scss';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -11,9 +13,10 @@ export function Footer() {
           <div className={styles.column}>
             <h4 className={styles.title}>НАВИГАЦИЯ</h4>
             <ul className={styles.list}>
-              <li>ГЛАВНАЯ</li>
-              <li>О КОМПАНИИ</li>
-              <li>НАШИ ПАРТНЕРЫ</li>
+              <Link href='/' className={styles.link}>
+                ГЛАВНАЯ
+              </Link>
+              <Link href='/about/clients'>О КОМПАНИИ</Link>
             </ul>
           </div>
 
@@ -21,9 +24,10 @@ export function Footer() {
           <div className={styles.column}>
             <h4 className={styles.title}>УСЛУГИ</h4>
             <ul className={styles.list}>
-              <li>СЛАБОТОЧНАЯ СЕТЬ</li>
-              <li>ВОДОСТОЧНЫЕ СИСТЕМЫ</li>
-              <li>ВЕНТИЛЯЦИЯ И КОНДИЦИОНИРОВАНИЕ</li>
+              <Link href='/services/low-current'>СЛАБОТОЧНАЯ СЕТЬ</Link>
+              <Link href='/services/drainage'>ВОДОСТОЧНАЯ СИСТЕМА</Link>
+              <Link href='/services/conditioning'>КОНДИЦИОНИРОВАНИЕ</Link>
+              <Link href='/services/ventilation'>ВЕНТИЛЯЦИЯ</Link>
             </ul>
           </div>
 
@@ -31,15 +35,23 @@ export function Footer() {
           <div className={styles.column}>
             <h4 className={styles.title}>МЫ НА СВЯЗИ</h4>
             <div className={styles.contacts}>
-              <p className={styles.text}>info@academstroy.kz</p>
-              <p className={styles.text}>+7 (708) 777 88 88</p>
-              <p className={styles.text}>+7 (708) 777 88 88</p>
+              <a href='mailto:info@academstroy.kz' className={styles.text}>
+                info@academstroy.kz
+              </a>
+              <a href='tel:+77087778888' className={styles.text}>
+                +7 (708) 777 88 88
+              </a>
+              <a href='tel:+77087778888' className={styles.text}>
+                +7 (708) 777 88 88
+              </a>
             </div>
           </div>
 
           {/* Кнопка */}
           <div className={styles.column}>
-            <button className={styles.button}>ЗАКАЗАТЬ РАСЧЕТ</button>
+            <button className={styles.button} onClick={scrollToDiscuss}>
+              ЗАКАЗАТЬ РАСЧЕТ
+            </button>
           </div>
         </div>
 

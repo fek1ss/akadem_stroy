@@ -1,15 +1,24 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useCallback } from 'react';
 
-// Расширяем интерфейс window, чтобы TS не ругался на отсутствие google
+// 1. ПИШЕМ ТИПЫ ПРЯМО ТУТ (сразу после импортов)
+interface GoogleTranslateOptions {
+  pageLanguage: string;
+  includedLanguages?: string;
+  autoDisplay?: boolean;
+}
+
 declare global {
   interface Window {
-    google: any;
+    google: {
+      translate: {
+        TranslateElement: new (options: GoogleTranslateOptions, elementId: string) => void;
+      };
+    };
     googleTranslateElementInit: () => void;
   }
 }
-
 export default function GoogleTranslate() {
   useEffect(() => {
     // 1. Очистка куки, чтобы сбросить автоматический перевод при входе

@@ -7,9 +7,13 @@ import { TransitionBtn } from '@/components/ui/transitionBtn/TransitionBtn';
 import { DotsPagination } from '@/components/ui/dotsPagination/DotsPagination';
 import styles from './styles.module.scss';
 import { projects } from '@/data';
+import { useRouter } from 'next/navigation';
+
+
 
 export function Projects() {
   const listRef = useRef<HTMLDivElement | null>(null);
+  const router = useRouter();
 
   const [isMobile, setIsMobile] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
@@ -65,7 +69,12 @@ export function Projects() {
     <div className={styles.projects}>
       <div className={styles.projects__header}>
         <Title text="реализованные проекты" color="#000" />
-        <TransitionBtn text="ВСЕ ПРОЕКТЫ" color="#595959" btn={false} />
+        <TransitionBtn 
+          text="ВСЕ ПРОЕКТЫ" 
+          color="#595959" 
+          btn={false} 
+          onClick={() => router.push('/about/projects')}
+        />
       </div>
 
       <div

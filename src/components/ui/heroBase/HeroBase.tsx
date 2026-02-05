@@ -4,6 +4,7 @@ import styles from './styles.module.scss';
 import { HeroProps } from '@/types';
 import Image from 'next/image';
 import { TransitionBtn } from '../transitionBtn/TransitionBtn';
+import { scrollToDiscuss } from '@/utils/scrollToDiscuss';
 
 export default function HeroBase({
   title,
@@ -11,13 +12,7 @@ export default function HeroBase({
   img,
   video = false,
 }: HeroProps) {
-  const scrollToDiscuss = () => {
-    const section = document.getElementById('discuss');
-    section?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  };
+  
 
   return (
     <div className={styles.hero}>
