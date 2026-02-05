@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 
 export default function GoogleTranslate() {
   useEffect(() => {
+    document.cookie = 'googtrans=; path=/; domain=' + window.location.hostname + '; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     // 🔹 Функция скрытия всех баннеров и тултипов Google
     const hideBanners = () => {
       // iframe баннера
