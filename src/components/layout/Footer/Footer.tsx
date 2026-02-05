@@ -16,7 +16,8 @@ export function Footer() {
               <Link href='/' className={styles.link}>
                 ГЛАВНАЯ
               </Link>
-              <Link href='/about/clients'>О КОМПАНИИ</Link>
+              <Link href='/about/clients'>НАШИ КЛИЕНТЫ</Link>
+              <Link href='/about/projects'>НАШИ ПРОЕКТЫ</Link>
             </ul>
           </div>
 

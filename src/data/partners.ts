@@ -9,5 +9,12 @@ export const partners = [
   '/images/partners/dospel.png',
   '/images/partners/luft.png',
   '/images/partners/lg.png',
-  
+  '/images/partners/normal.png',
+  '/images/partners/biben.png',
+  '/images/partners/ceber.png',
+  '/images/partners/danfus.png',
+  '/images/partners/nikvision.png',
+  '/images/partners/sav.png',
+  '/images/partners/bold.png',
+  '/images/partners/alhua.png',
 ];
