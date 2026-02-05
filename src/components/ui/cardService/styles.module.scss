@@ -8,6 +8,9 @@
   gap: 1rem;
   padding: 2rem;
   font-family: var(--font-montserrat-alt);
+  cursor: pointer;
+  transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+
 
   &__title {
     font-size: 20px;
@@ -17,7 +20,7 @@
 
   &__desc {
     color: var(--grey-text);
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
   }
 
@@ -50,4 +53,9 @@
       font-size: 13px;
     }
   }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }

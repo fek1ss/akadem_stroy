@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import styles from './styles.module.scss';
 import { formatPhone } from '@/utils/formatPhone';
 import { Toast } from '../toast/Toast';
+import { motion } from 'framer-motion';
 
 const initialForm = {
   company: '',
@@ -67,7 +68,14 @@ export function DiscussForm() {
 
   return (
     <>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <motion.form
+        className={styles.form}
+        onSubmit={handleSubmit}
+        initial={{ x: 200, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
         <div className={styles.row}>
           <input
             className={styles.inp}
@@ -113,7 +121,7 @@ export function DiscussForm() {
         <button className={styles.btn} type='submit'>
           ЗАКАЗАТЬ РАСЧЕТ
         </button>
-      </form>
+      </motion.form>
 
       {showToast && (
         <Toast

@@ -6,3 +6,4 @@ export * from './pagination';
 export * from './hero';
 export * from './partners';
 export * from './filter';
+export * from './services';
