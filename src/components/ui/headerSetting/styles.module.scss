@@ -10,6 +10,21 @@
   gap: 5px;
 }
 
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-bottom: 1px solid white;
+}
+
+.btn:focus {
+  border: none;
+  outline: none;
+}
+
 .phone {
   display: flex;
   align-items: center;

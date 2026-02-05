@@ -5,8 +5,10 @@ export function HeaderSetting() {
   return (
     <div className={styles.setting}>
       <div className={styles.lang}>
-        <button onClick={() => window.location.reload()}>RU</button>/
+        <button onClick={() => window.location.reload()} className={styles.btn}>RU</button>
+        /
         <button
+        className={styles.btn}
           onClick={() => {
             const select = document.querySelector(
               '.goog-te-combo',
