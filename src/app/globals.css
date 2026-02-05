@@ -41,6 +41,33 @@ a {
   margin-bottom: 2rem;
 }
 
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+#goog-gt-tt {
+    display: none !important;
+}
+.goog-tooltip.skiptranslate {
+    display: none !important;
+}
+.activity-root,
+.status-message,
+.started-activity-container {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   html {

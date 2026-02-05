@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <HeroBase
-        title='Академ строй'
+        title='Akadem Stroy'
         description='Наш капитал - репутация'
         video={true}
         img=''

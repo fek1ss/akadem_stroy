@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { Montserrat, Montserrat_Alternates } from 'next/font/google';
 import './globals.css';
+
 import Header from './../components/layout/Header/Header';
 import { Socials } from '@/components/ui/socials/Socials';
 import { Footer } from '@/components/layout/Footer/Footer';
+import GoogleTranslate from '@/components/GoogleTranslate';
 
 const montserrat = Montserrat({
   subsets: ['latin', 'cyrillic'],
@@ -31,9 +33,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ru'>
-      <body
-        className={`${montserrat.variable} ${montserratAlt.variable}`}
-      >
+      <body className={`${montserrat.variable} ${montserratAlt.variable}`}>
+        <GoogleTranslate />
+
         <Header />
         <Socials />
         {children}
