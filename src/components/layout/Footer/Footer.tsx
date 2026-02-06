@@ -1,10 +1,15 @@
 // Footer.tsx
 'use client';
-import { scrollToDiscuss } from '@/utils/scrollToDiscuss';
 import styles from './styles.module.scss';
 import Link from 'next/link';
+import { Modal } from '@/components/ui/modal/Modal';
+import { useState } from 'react';
 
 export function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__wrapper}>
@@ -50,7 +55,7 @@ export function Footer() {
 
           {/* Кнопка */}
           <div className={styles.column}>
-            <button className={styles.button} onClick={scrollToDiscuss}>
+            <button className={styles.button} onClick={openModal}>
               ЗАКАЗАТЬ РАСЧЕТ
             </button>
           </div>
@@ -62,6 +67,7 @@ export function Footer() {
           <p className={styles.copy}>academstroy.kz</p>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal} />
     </footer>
   );
 }
