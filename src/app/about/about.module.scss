@@ -1,0 +1,25 @@
+.page__wrapper {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+
+.head {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  justify-content: space-between;
+  grid-auto-flow: column;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .page__wrapper {
+    margin-top: 6rem;
+  }
+
+  .head {
+    display: block;
+  }
+}

@@ -1,22 +1,24 @@
 .filter {
   display: flex;
   align-items: center;
-  justify-content: space-between; // Распределяем категории равномерно
-  padding: 20px 40px;
+  justify-content: flex-start; // Распределяем категории равномерно
+  padding: 10px;
   border: 1px solid #333; // Цвет рамки подберите под ваш макет
   border-radius: 20px;
-  margin: 7rem auto;
+  margin: 3rem 0;
   margin-bottom: 2rem;
   background-color: #fff;
-  width: 90%;
-
+  max-width: 100%;
+  gap: 1rem;
 
   .filterBtn {
+    flex: 0 1 auto;
     background: none;
     border: none;
     cursor: pointer;
     font-size: 18px;
     font-weight: 600;
+    font-family: var(--font-montserrat-alt);
     color: #000;
     transition: all 0.3s ease;
     padding: 10px 15px;
@@ -29,7 +31,7 @@
 
     // Отрисовка вертикальных разделителей
     &:not(:last-child)::after {
-      content: "";
+      content: '';
       position: absolute;
       right: 0;
       top: 50%;
@@ -41,7 +43,7 @@
 
     // Стили для активной кнопки
     &.active {
-      color: #0066cc; // Ваш фирменный синий цвет
+      color: var(--main-color); // Ваш фирменный синий цвет
     }
 
     &:hover:not(.active) {
@@ -53,17 +55,51 @@
 // Адаптивность для мобильных устройств
 @media (max-width: 1024px) {
   .filter {
-    flex-wrap: wrap;
-    padding: 15px;
-    
-    .filterBtn {
-      font-size: 14px;
-      flex: 1 1 30%; // По 3 кнопки в ряд
-      
-      
-      &:not(:last-child)::after {
-        display: none; // Убираем линии на мобилках
-      }
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    margin: 2rem auto;
+    padding: 10px;
+    background: transparent;
+
+    scrollbar-width: none; // Firefox
+    -ms-overflow-style: none; // IE
+
+    &::-webkit-scrollbar {
+      display: none; // Chrome, Safari
+    }
+  }
+
+  .filterBtn {
+    flex: 0 0 auto;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 999px;
+
+    background: #f2f2f2;
+    color: #000;
+    white-space: nowrap;
+
+    &:not(:last-child)::after {
+      display: none;
     }
   }
 }
+
+@media (max-width: 768px) {
+  .filter {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 0.3rem;
+    padding: 8px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .filterBtn {
+    flex: 0 0 auto; // фикс под контент
+  }
+}
+

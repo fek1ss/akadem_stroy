@@ -1,10 +1,12 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
 import { ProjectCard } from '@/components/ui/projectCard/ProjectCard';
 import { Filter } from '@/components/ui/filter/Filter';
 import styles from './styles.module.scss';
 import { projects } from '@/data';
+import { Title } from '@/components/ui/title/Title';
+import about from '../about.module.scss';
 
 export default function Page() {
   const categories = [
@@ -12,30 +14,35 @@ export default function Page() {
     'Бизнес центры',
     'Торговые сети',
     'Промышленные базы',
-    'Госучреждения'
+    'Госучреждения',
   ];
 
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
   return (
     <div className={styles.projectsPage}>
-      <Filter
-        data={projects}
-        categories={categories}
-        onFilter={setFilteredProjects}
-        getCategory={item => item.category}
-      />
-
-      <div className={styles.projectsList}>
-        {filteredProjects.map((prj, i) => (
-          <ProjectCard
-            key={i}
-            title={prj.title}
-            description={prj.description}
-            year={prj.year}
-            image={prj.img}
+      <div className={about.page__wrapper}>
+        <div className={about.head}>
+          <Title text='Наши проекты' color='#000' />
+          <Filter
+            data={projects}
+            categories={categories}
+            onFilter={setFilteredProjects}
+            getCategory={item => item.category}
           />
-        ))}
+        </div>
+
+        <div className={styles.projectsList}>
+          {filteredProjects.map((prj, i) => (
+            <ProjectCard
+              key={i}
+              title={prj.title}
+              description={prj.description}
+              year={prj.year}
+              image={prj.img}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

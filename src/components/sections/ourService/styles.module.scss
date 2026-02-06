@@ -4,9 +4,8 @@
   justify-content: center;
   gap: 3rem;
   width: 90%;
-  height: 100vh;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: black;
   font-family: var(--font-montserrat-alt);
 
@@ -45,8 +44,6 @@
   // Мобилки
   @media (max-width: 768px) {
     gap: 1.5rem;
-    padding: 1rem 0;
-    margin: 3rem auto;
 
     &__cards {
       flex-direction: column; // карточки вертикально

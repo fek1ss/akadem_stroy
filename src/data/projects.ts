@@ -2,7 +2,7 @@ export const projects = [
   {
     title: 'Автосалон «Mercedes» г.Алматы',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
-    img: '/images/projects/mercedes.png',
+    img: '/images/projects/mercedes.jpg',
     year: 2025,
     category: 'Бизнес центры',
   },

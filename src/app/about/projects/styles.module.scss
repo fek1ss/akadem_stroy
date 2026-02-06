@@ -1,14 +1,9 @@
-.projectsPage {
-  padding: 1rem 0;
-}
-
 .projectsList {
   display: grid;
   gap: 3rem;
   width: 100%;
   grid-template-columns: repeat(3, 1fr);
   transition: all 0.3s ease;
-  width: 90%;
   margin: 0 auto;
 }
 
