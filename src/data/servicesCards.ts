@@ -19,12 +19,5 @@ export const services = [
       'Слаботочные сети — проектирование и монтаж видеонаблюдения, охранно-пожарной сигнализации и СКУД.',
     imgSrc: '/images/icons/truba.png',
     link: '/services/low-current'
-  },
-  {
-    title: 'Водосточная система',
-    description:
-      'Анализ потребностей, закуп, выбор поставщиков, контроль качества и логистики.',
-    imgSrc: '/images/icons/kaplay.png',
-    link: '/services/drainage'
-  },
+  }
 ];

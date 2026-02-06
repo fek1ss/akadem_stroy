@@ -15,7 +15,6 @@ export const links = [
       { href: '/services/ventilation', label: 'Вентиляция' },
       { href: '/services/conditioning', label: 'Кондиционирование' },
       { href: '/services/low-current', label: 'Слаботочные системы' },
-      { href: '/services/drainage', label: 'Водосточная система' },
     ]
   },
   { href: '/contacts', label: 'Контакты' },

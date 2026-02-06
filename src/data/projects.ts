@@ -65,7 +65,7 @@ export const projects = [
   {
     title: 'ЖК «Lancashire» г.Алматы',
     description: 'Поставка, монтаж систем вентиляции (для компании «К7 Group»).',
-    img: '/images/projects/lancashire.png',
+    img: '/images/projects/Lancashire.png',
     year: 2022,
     category: 'Жилые комплексы',
   },
