@@ -68,6 +68,44 @@ body {
 }
 
 
+.notfound {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #000;
+}
+
+.notfound__content {
+  text-align: center;
+}
+
+.notfound__code {
+  font-size: 120px;
+  font-weight: 600;
+}
+
+.notfound__text {
+  margin: 16px 0 32px;
+  font-size: 18px;
+  color: #595959;
+}
+
+.notfound__btn {
+  padding: 12px 28px;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.notfound__btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+
 
 @media (prefers-color-scheme: dark) {
   html {

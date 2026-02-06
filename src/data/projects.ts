@@ -29,7 +29,8 @@ export const projects = [
   },
   {
     title: 'АЗС «Helios» ЗКО',
-    description: 'Поставка, монтаж систем вентиляции и кондиционирования воздуха.',
+    description:
+      'Поставка, монтаж систем вентиляции и кондиционирования воздуха.',
     img: '/images/projects/helios.png',
     year: 2022,
     category: 'Торговые сети',
@@ -64,7 +65,8 @@ export const projects = [
   },
   {
     title: 'ЖК «Lancashire» г.Алматы',
-    description: 'Поставка, монтаж систем вентиляции (для компании «К7 Group»).',
+    description:
+      'Поставка, монтаж систем вентиляции (для компании «К7 Group»).',
     img: '/images/projects/Lancashire.png',
     year: 2022,
     category: 'Жилые комплексы',
@@ -85,7 +87,8 @@ export const projects = [
   },
   {
     title: 'ТОО «Hyundai Trans Auto» г.Алматы',
-    description: 'Поставка, монтаж систем вентиляции для цеха производства школьных автобусов.',
+    description:
+      'Поставка, монтаж систем вентиляции для цеха производства школьных автобусов.',
     img: '/images/projects/hyunday.png',
     year: 2024,
     category: 'Промышленные базы',
@@ -155,7 +158,8 @@ export const projects = [
   },
   {
     title: 'Школа-интернат с.Чапаево, ЗКО',
-    description: 'Поставка, монтаж вентиляции (приточно-вытяжные системы «DOSPEL»).',
+    description:
+      'Поставка, монтаж вентиляции (приточно-вытяжные системы «DOSPEL»).',
     img: '/images/projects/boarding_school_chapaevo.png',
     year: 2017,
     category: 'Госучреждения',

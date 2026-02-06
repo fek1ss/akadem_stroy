@@ -31,7 +31,6 @@ export function Footer() {
             <h4 className={styles.title}>УСЛУГИ</h4>
             <ul className={styles.list}>
               <Link href='/services/low-current'>СЛАБОТОЧНАЯ СЕТЬ</Link>
-              <Link href='/services/drainage'>ВОДОСТОЧНАЯ СИСТЕМА</Link>
               <Link href='/services/conditioning'>КОНДИЦИОНИРОВАНИЕ</Link>
               <Link href='/services/ventilation'>ВЕНТИЛЯЦИЯ</Link>
             </ul>
