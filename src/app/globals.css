@@ -2,7 +2,7 @@
   --background: #ffffff;
   --main-color: #2f6ab6;
   --grey-text: #595959;
-  --footer-text: #AAAAAA;
+  --footer-text: #aaaaaa;
   --font-sans: var(--font-montserrat);
   --font-accent: var(--font-montserrat-alt);
 }
@@ -41,6 +41,18 @@ a {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 1280px) {
+  .page {
+    gap: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    gap: 3rem;
+  }
+}
+
 .goog-te-banner-frame {
   display: none !important;
 }
@@ -50,23 +62,22 @@ body {
 }
 
 .goog-te-banner-frame.skiptranslate {
-    display: none !important;
+  display: none !important;
 }
 #goog-gt-tt {
-    display: none !important;
+  display: none !important;
 }
 .goog-tooltip.skiptranslate {
-    display: none !important;
+  display: none !important;
 }
 .activity-root,
 .status-message,
 .started-activity-container {
-    display: none !important;
+  display: none !important;
 }
 body {
-    top: 0px !important;
+  top: 0px !important;
 }
-
 
 .notfound {
   min-height: 100vh;
@@ -104,8 +115,6 @@ body {
   background: #000;
   color: #fff;
 }
-
-
 
 @media (prefers-color-scheme: dark) {
   html {

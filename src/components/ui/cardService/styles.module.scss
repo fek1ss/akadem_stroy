@@ -20,7 +20,7 @@
 
   &__desc {
     color: var(--grey-text);
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
   }
 
@@ -32,11 +32,11 @@
     padding: 1.5rem;
 
     &__title {
-      font-size: 18px;
+      font-size: 20px;
     }
 
     &__desc {
-      font-size: 14px;
+      font-size: 16px;
     }
   }
 
@@ -46,11 +46,11 @@
     padding: 1rem;
 
     &__title {
-      font-size: 16px;
+      font-size: 20px;
     }
 
     &__desc {
-      font-size: 13px;
+      font-size: 14px;
     }
   }
 }

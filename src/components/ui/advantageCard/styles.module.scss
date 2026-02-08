@@ -2,7 +2,9 @@
   font-family: var(--font-montserrat-alt);
   display: flex;
   gap: 1rem;
-  width: 500px;
+  width: 100%;
+  max-width: 700px;
+  min-height: 220px;
 
   &__info {
     display: flex;
@@ -25,8 +27,8 @@
   /* ================= Адаптив ================= */
 
   // Планшеты
-  @media (max-width: 1024px) {
-    width: 400px;
+  @media (max-width: 1280px) {
+    max-width: 400px;
     gap: 0.8rem;
 
     &__title {
@@ -34,7 +36,7 @@
     }
 
     &__desc {
-      font-size: 15px;
+      font-size: 18px;
     }
   }
 

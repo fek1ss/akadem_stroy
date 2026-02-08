@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   margin: 1rem 0;
+  padding-bottom: 4rem;
   gap: 5rem;
   justify-content: center;
   font-family: var(--font-montserrat-alt), sans-serif;
@@ -40,13 +41,17 @@
     color: var(--grey-text);
     font-size: 22px;
     font-weight: 500;
+    line-height: 1.5;
   }
 
   /* ================= Адаптив ================= */
 
   // Планшеты
-  @media (max-width: 1024px) {
-    gap: 2rem;
+  @media (max-width: 1280px) {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding-bottom: 4rem;
 
     &__title {
       font-size: 32px;
@@ -57,15 +62,13 @@
     }
 
     &__img {
-      max-width: 400px;
+      max-width: 100%;
     }
   }
 
   // Мобилки
   @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
+    padding-bottom: 1rem;
 
     &__img {
       max-width: 100%;

@@ -7,7 +7,16 @@
   &__about {
     width: 90%;
     margin: 3rem auto;
-    height: 100vh;
+    min-height: 100vh;
     padding: 2rem 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .page {
+
+    &__about {
+      margin: 0rem auto;
+    }
   }
 }
