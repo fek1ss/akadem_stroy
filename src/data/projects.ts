@@ -5,19 +5,19 @@ export const projects = [
     img: '/images/projects/mercedes.jpg',
     year: 2025,
     category: 'Бизнес центры',
-  },
+  },  
   {
     title: 'Сеть ресторанов «Shafran» г.Алматы',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
     img: '/images/projects/shafran.png',
-    year: 2020,
+    year: 2025,
     category: 'Торговые сети',
   },
   {
     title: 'Сеть ресторанов «Мәдениет үйі» г.Алматы',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
     img: '/images/projects/restourans.png',
-    year: 2019,
+    year: 2025,
     category: 'Торговые сети',
   },
   {
@@ -32,21 +32,21 @@ export const projects = [
     description:
       'Поставка, монтаж систем вентиляции и кондиционирования воздуха.',
     img: '/images/projects/helios.png',
-    year: 2022,
+    year: 2023,
     category: 'Торговые сети',
   },
   {
     title: 'АЗС «SINOOIL» г.Уральск',
     description: 'Монтаж систем вентиляции и сплит-систем.',
     img: '/images/projects/sinooil.png',
-    year: 2022,
+    year: 2023,
     category: 'Торговые сети',
   },
   {
     title: 'РК «Eldivino» г.Уральск',
     description: 'Монтаж систем вентиляции и кондиционеров.',
     img: '/images/projects/eldivino.png',
-    year: 2020,
+    year: 2023,
     category: 'Бизнес центры',
   },
   {
@@ -81,7 +81,7 @@ export const projects = [
   {
     title: '7-этажное административное здание г.Уральск',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
-    img: '/images/projects/admin.png',
+    img: '/images/projects/7floor.png',
     year: 2025,
     category: 'Бизнес центры',
   },
@@ -111,7 +111,7 @@ export const projects = [
     title: 'ТОО «QHSE-Akbarys» — вахтовый поселок Тенгиз',
     description: 'Монтаж сайдинга и сэндвич-панелей.',
     img: '/images/projects/tengiz_panels.png',
-    year: 2021,
+    year: 2023,
     category: 'Промышленные базы',
   },
   {
