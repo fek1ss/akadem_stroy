@@ -14,7 +14,7 @@ export async function POST(req: Request) {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.SMTP_USER, // flexypufic@gmail.com
+        user: process.env.SMTP_USER, 
         pass: process.env.SMTP_PASS,
       },
     });
@@ -29,8 +29,8 @@ export async function POST(req: Request) {
     }
 
     await transporter.sendMail({
-      from: `"${company}" <${process.env.SMTP_USER}>`, // отображаемое имя компании
-      to: 'flexypufic@gmail.com',                       // куда придет письмо
+      from: `"${company}" <info@akademstroy.kz>`, // отображаемое имя компании
+      to: 'info@akademstroy.kz',                       // куда придет письмо
       replyTo: phone ? `${phone}@example.com` : undefined, // можно указать email пользователя, если есть
       subject: 'Заявка с сайта',
       text: `
