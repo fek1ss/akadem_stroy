@@ -1,6 +1,7 @@
 .content {
   width: 100%;
   display: flex;
+  align-items: start;
   margin: 1rem 0;
   padding-bottom: 4rem;
   gap: 5rem;
@@ -8,21 +9,19 @@
   font-family: var(--font-montserrat-alt), sans-serif;
 
   &__img {
-    border: none;
-    border-radius: 20px;
     width: 100%;
     max-width: 500px;
-    height: auto;
+    aspect-ratio: 4 / 3; // или 16 / 9
     object-fit: cover;
+    border-radius: 20px;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1rem;
     font-family: var(--font-montserrat-alt);
     width: 100%;
-    padding-top: 2rem;
   }
 
   &__title {
@@ -39,7 +38,7 @@
 
   &__description {
     color: var(--grey-text);
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
   }
@@ -48,18 +47,25 @@
 
   // Планшеты
   @media (max-width: 1280px) {
-    flex-direction: column;
     gap: 1.5rem;
-    align-items: center;
+    align-items: start;
     padding-bottom: 4rem;
 
     &__title {
       font-size: 32px;
     }
+  }
 
-    &__description {
-      font-size: 20px;
+
+  @media (max-width: 1080px) {
+    
+    &__img {
+      max-width: 400px;
     }
+  }
+
+  @media (max-width: 992px) {
+    flex-direction: column;
 
     &__img {
       max-width: 100%;
@@ -81,10 +87,6 @@
 
     &__title {
       font-size: 28px;
-    }
-
-    &__description {
-      font-size: 18px;
     }
   }
 }

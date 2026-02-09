@@ -41,11 +41,6 @@ a {
   margin-bottom: 2rem;
 }
 
-@media (max-width: 1280px) {
-  .page {
-    gap: 7rem;
-  }
-}
 
 @media (max-width: 768px) {
   .page {
