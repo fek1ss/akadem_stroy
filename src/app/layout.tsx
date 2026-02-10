@@ -24,6 +24,9 @@ const montserratAlt = Montserrat_Alternates({
 export const metadata: Metadata = {
   title: 'Академ Строй',
   description: 'Строительная компания в Казахстане',
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({
