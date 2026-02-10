@@ -40,14 +40,14 @@ export function Footer() {
           <div className={styles.column}>
             <h4 className={styles.title}>МЫ НА СВЯЗИ</h4>
             <div className={styles.contacts}>
-              <a href='mailto:info@academstroy.kz' className={styles.text}>
-                info@academstroy.kz
+              <a href='mailto:info@akademstroy.kz' className={styles.text}>
+                info@akademstroy.kz
               </a>
               <a href='tel:+77087778888' className={styles.text}>
-                +7 (708) 777 88 88
+                +7 (708) 434 36 90
               </a>
               <a href='tel:+77087778888' className={styles.text}>
-                +7 (708) 777 88 88
+                +7 (777) 565 06 55
               </a>
             </div>
           </div>
@@ -63,7 +63,7 @@ export function Footer() {
         {/* Нижняя линия и копирайт */}
         <div className={styles.bottom}>
           <hr className={styles.line} />
-          <p className={styles.copy}>academstroy.kz</p>
+          <p className={styles.copy}>akademstroy.kz</p>
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={closeModal} />
