@@ -111,14 +111,28 @@ export const projects = [
     title: 'ТОО «QHSE-Akbarys» — вахтовый поселок Тенгиз',
     description: 'Монтаж сайдинга и сэндвич-панелей.',
     img: '/images/projects/tengiz_panels.png',
-    year: 2023,
+    year: 2020,
     category: 'Промышленные базы',
   },
   {
-    title: '«Комфортная школа на 1200 мест» п.Деркул, ЗКО',
+    title: '«Комфортная школа на 1200 мест» п.Подстепное, ЗКО',
+    description: 'Поставка, монтаж систем вентиляции и кондиционирования, слаботочных систем',
+    img: '/images/projects/podstepnoe.png',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+  {
+    title: '«Комфортная школа на 1500 мест» п.Деркул, ЗКО',
     description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
     img: '/images/projects/school__derkul.png',
     year: 2024,
+    category: 'Госучреждения',
+  },
+  {
+    title: '«Комфортная школа на 1200 мест» п.Достык, ЗКО',
+    description: 'Поставка, монтаж систем вентиляции и кондиционирования.',
+    img: '/images/projects/dostyk__shcool.jpg',
+    year: 2025,
     category: 'Госучреждения',
   },
   {
@@ -165,6 +179,14 @@ export const projects = [
     category: 'Госучреждения',
   },
   {
+    title: 'Школа-интернат с.Чапаево, ЗКО',
+    description:
+      'Поставка, монтаж вентиляции (приточно-вытяжные системы «DOSPEL»).',
+    img: '/images/projects/boarding_school_chapaevo.png',
+    year: 2017,
+    category: 'Госучреждения',
+  },
+  {
     title: 'Поликлиника №7 г.Уральск',
     description: 'Поставка, монтаж вентиляции и сплит-систем.',
     img: '/images/projects/poliklinika7.png',
@@ -178,4 +200,19 @@ export const projects = [
     year: 2024,
     category: 'Госучреждения',
   },
+  {
+    title: 'Убойный цех для СПК «Кишкенекум» г.Актау',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/uboy.jpg',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+  {
+    title: 'Убойный цех «Под ключ» для СПК «Шамшырак», г.Уральск',
+    description: 'Поставка, монтаж систем вентиляции.',
+    img: '/images/projects/shan.png',
+    year: 2024,
+    category: 'Госучреждения',
+  },
+  
 ];

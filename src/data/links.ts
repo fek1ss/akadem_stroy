@@ -17,5 +17,5 @@ export const links = [
       { href: '/services/low-current', label: 'Слаботочные системы' },
     ]
   },
-  { href: '/contacts', label: 'Контакты' },
+  { href: '/contact', label: 'Контакты' },
 ];
