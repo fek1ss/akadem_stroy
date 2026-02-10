@@ -179,14 +179,6 @@ export const projects = [
     category: 'Госучреждения',
   },
   {
-    title: 'Школа-интернат с.Чапаево, ЗКО',
-    description:
-      'Поставка, монтаж вентиляции (приточно-вытяжные системы «DOSPEL»).',
-    img: '/images/projects/boarding_school_chapaevo.png',
-    year: 2017,
-    category: 'Госучреждения',
-  },
-  {
     title: 'Поликлиника №7 г.Уральск',
     description: 'Поставка, монтаж вентиляции и сплит-систем.',
     img: '/images/projects/poliklinika7.png',
